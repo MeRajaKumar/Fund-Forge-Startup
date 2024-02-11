@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VentureConnect</title>
+    <link rel="stylesheet" href="style4.css">
+    <style>
+        /* Slider Styles */
+        .slider {
+            position: relative;
+            overflow: hidden;
+            max-width: 100%;
+            margin-top: 20px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            flex: 0 0 auto;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>VentureConnect</h1>
+            <p>Bridging Investors with Innovators</p>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="#for-investors">For Investors</a></li>
+                <li><a href="#for-founders">For Founders</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <section class="slider" id="for-investors">
+        <div class="slides">
+            <div class="slide">
+                <img src="image1.jpg" alt="Image 1">
+            </div>
+            <div class="slide">
+                <img src="image2.jpg" alt="Image 2">
+            </div>
+            <div class="slide">
+                <img src="image3.jpg" alt="Image 3">
+            </div>
+        </div>
+    </section>
+    <section id="for-investors">
+        <div class="container">
+            <h2>For Investors</h2>
+            <p>Overview of benefits for investors...</p>
+            <a href="#" class="button">Sign Up</a>
+        </div>
+    </section>
+    <section id="for-founders">
+        <div class="container">
+            <h2>For Founders</h2>
+            <p>Overview of benefits for founders...</p>
+            <a href="#" class="button">Get Started</a>
+        </div>
+    </section>
+    <section id="about">
+        <div class="container">
+            <h2>About VentureConnect</h2>
+            <p>Explanation about the platform...</p>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                <input type="submit" value="Send Message" class="button">
+            </form>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 VentureConnect. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script4.js"></script>
+    <script>
+        // Image Slider JavaScript
+        const slides = document.querySelector('.slides');
+        const slideWidth = document.querySelector('.slide').clientWidth;
+        let currentIndex = 0;
+
+        function slide() {
+            currentIndex++;
+            if (currentIndex >= slides.children.length) {
+                currentIndex = 0;
+            }
+            slides.style.transform = `translateX(-${currentIndex * slideWidth}px)`;
+        }
+
+        setInterval(slide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+</html>
+
